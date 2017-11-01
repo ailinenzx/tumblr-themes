@@ -1,0 +1,561 @@
+<!--
+
+
+       Theme Elizabeth by Aili M | ailinen.tumblr.com 
+       Basically, use as you wish, but make it clear I made the theme.
+       
+       
+MIT License
+
+Copyright (c) 2017 Aili M | ailinen.tumblr.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+<link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+
+<title>
+{block:TagPage}{Tag} posts - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}
+</title>
+
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Megrim|Permanent+Marker|Seaweed+Script&amp;subset=latin-ext" rel="stylesheet"> 
+
+<link rel="stylesheet" href="http://static.tumblr.com/xeccbfq/9Qenv9yn8/normalize.min.css" />
+<link href="http://static.tumblr.com/wgijwsy/k1Hm9ei8b/normalize.css" rel="stylesheet" type="text/css" />
+<link href="http://static.tumblr.com/qpcqxok/AOloyjcj9/elizabeth.css" rel="stylesheet" type="text/css"/>
+
+
+<meta name="if:Show Archive" content="1"/>
+<meta name="if:Show Reading" content="0"/>
+<meta name="if:Show Links" content="1" />
+<meta name="if:Show Avatar" content="1" />
+<meta name="if:Show Searchbar" content="1" />
+
+<meta name="color:Background" content="#661a1a" />
+<meta name="color:Accent 1" content="#213758" />
+<meta name="color:Accent 2" content="#972e0d" />
+<meta name="color:Text" content="#222222" />
+
+<meta name="image:Background" content="" />
+<meta name="image:Sidebar" content=" "/>
+<meta name="image:Reading" content=" "/>
+
+<meta name="text:Link 1" content=" "/>
+<meta name="text:Link 1 Title" content=" "/>
+<meta name="text:Link 2" content=" "/>
+<meta name="text:Link 2 Title" content=" "/>
+<meta name="text:Link 3" content=" "/>
+<meta name="text:Link 3 Title" content=" "/>
+
+<style type="text/css">
+
+{CustomCSS}
+
+/* general CSS */
+
+
+body {
+    background: url('{image:background}') {color:background} repeat fixed;
+    background-size: 100% 100%;
+    color: {color:text};
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Permanent Marker', helvetica, sans-serif;
+    color: {color:Accent 1};
+    line-height: 0.8em;
+}
+
+a:link {
+    color: {color:accent 1};
+    text-decoration: none;
+    transition: all 0.6s ease-out;
+    -o-transition-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+}
+
+a:hover {
+    color: {color:accent 2};
+     text-decoration: none;
+    opacity: 0.7;
+    transition: all 0.6s ease-out;
+    -o-transition-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+}
+
+a:visited {
+    color: {color:accent 1};
+     text-decoration: none;
+    opacity: 0.7;
+    transition: all 0.6s ease-out;
+    -o-transition-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+}
+
+#sidebar h1 a {
+    color: {color:accent 1};
+}
+
+#sidebar li {
+    background-color: {color:accent 1};
+    padding: 3px;
+    margin: 5px 0px;
+    line-height: 0.9em;
+    text-align: center;
+    transition: all 0.6s ease-out;
+    -o-transition-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+}
+
+#sidebar li:hover {
+    background-color: {color:accent 2};
+    transition: all 0.6s ease-out;
+    -o-transition-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+}
+
+input {
+    border: 2px solid {color:accent 1};
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    background: #FCFBF8;
+    font-family: helvetica;
+}
+
+input:focus {
+    border: 2px solid {color:accent 2};
+}
+
+{Block:PermalinkPage}
+#bottom {
+           display: none;
+       }
+        {/Block:PermalinkPage}
+
+</style>
+</head>
+
+<body class="{block:IndexPage}is-index-page{/block:IndexPage} {block:PermalinkPage}is-permalink-page{/block:PermalinkPage}">
+
+<div id="alles">
+
+<div id="sidebar">
+
+    {block:ifShowAvatar}
+    <img src="{image:sidebar}"/>
+    {/block:ifShowAvatar}
+    
+    <div id="notimg">
+
+         {block:ShowTitle}
+          <h1 class="blog-title">
+            <a href="/" title="{lang:Home}">{Title}</a>
+          </h1>
+          {/block:ShowTitle}
+    
+          {block:ShowDescription}
+          {block:Description}
+          <p class="blog-description">{Description}</p>
+          {block:Description}
+          {/block:ShowDescription}  
+
+        
+          <div class="nav-wrapper">
+            <nav>
+              <ul>
+                 {block:AskEnabled}
+                  <li>
+                    <a href="/ask">{AskLabel}</a>
+                  </li>
+                  {/block:AskEnabled}
+              
+                {block:SubmissionsEnabled}
+                  <li>
+                    <a href="/submit">{SubmitLabel}</a>
+                  </li>
+                  {/block:SubmissionsEnabled}
+                  
+                  {block:ifShowArchive}
+                  <li>
+                  <a href="/archive">Archive</a>
+                  </li>
+                  {/block:ifShowArchive}
+              
+                  {block:HasPages}
+                  {block:Pages}
+                  <li>
+                    <a href="{URL}">{Label}</a>
+                  </li>
+                  {/block:Pages}
+                  {/block:HasPages}
+                  
+                  {block:IfShowLinks}
+                  <li><a href="{text:Link 1}">{text:Link 1 Title}</a></li>
+                  <li><a href="{text:Link 2}">{text:Link 2 Title}</a></li>
+                  <li><a href="{text:Link 3}">{text:Link 3 Title}</a></li>
+                  {/block:IfShowLinks}
+    
+              </ul>
+            </nav>
+            
+    
+          </div>
+          
+          {block:ifShowSearchbar}
+        
+        <form action="/search" method="get" class="centered">
+    <input type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}"/>
+  </form>
+  
+  {/block:ifShowSearchbar}
+  
+<div class="centered">
+    {block:ifShowReading}
+    <h2>Currently Reading</h2>
+    <img src="{image:Reading}"/>
+    {/block:ifShowReading}
+</div>
+  
+  <div id="cr" class="centered">
+<p>Theme Elizabeth Ⓒ <a href="http://ailinen.tumblr.com/">Aili M.</a>, powered by <a href="http://tumblr.com/">Tumblr</a> </br>
+    Content Ⓒ  {blogURL} </br> {CopyrightYears} unless stated otherwise.
+</p>
+
+   </div>
+    
+        
+    </div> <!-- end of not-img -->
+    
+</div> <!-- end of sidebar -->
+
+
+
+
+
+
+
+<div id="content">
+
+    <!-- Search results -->
+    {block:SearchPage}
+    <div class="search-page message">
+    
+
+  {block:SearchResults}
+  <p class="search-result">{lang:Search results for SearchQuery 2}</p>
+  {/block:SearchResults}
+
+  {block:NoSearchResults}
+  <p class="search-result">{lang:No results for SearchQuery 2}</p>
+  {/block:NoSearchResults}
+
+  <span class="divider"></span>
+</div>
+    
+    
+    </div>
+    {/block:SearchPage}
+
+    {block:TagPage}
+
+<div class="tag-page message">
+  <p class="tag-wrapper">{lang:Showing posts tagged Tag 2}</p>
+
+  <span class="divider"></span>
+</div>
+{/block:TagPage}
+    </div>
+    {/block:TagPage}
+    
+
+    <main role="main" {block:IndexPage}data-columns{/block:IndexPage}>
+      {block:Posts}
+      <article>
+      
+      {block:Text}
+<div class="type-text post-content">
+  {block:Title}
+  <h2 class="title">
+	<a href="{Permalink}">{Title}</a>
+  </h2>
+  {/block:Title}
+
+  {Body}
+</div>
+{/block:Text}
+
+
+{block:Photo}
+<figure class="type-photo post-content">
+  {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
+
+  {block:Caption}
+  <figcaption class="caption">
+	<p>{Caption}</p>
+  </figcaption>
+  {/block:Caption}
+  
+  {block:PermalinkPage}
+  
+  {block:Exif}
+<ul class="exif">
+<li>{block:Camera}Camera: {Camera}{/block:Camera}</li>
+<li>{block:Aperture}Aperture: {Aperture}{/block:Aperture}</li>
+<li>{block:Exposure}Exposure: {Exposure}{/block:Exposure}</li>
+<li>{block:FocalLength}Focal Length: {FocalLength}{/block:FocalLength}</li>
+</ul>{/block:Exif}
+
+{/block:PermalinkPage}
+  
+</figure>
+{/block:Photo}
+
+
+{block:Photoset}
+<figure class="type-photoset post-content">
+  {Photoset}
+
+  {block:Caption}
+  <figcaption class="caption">
+	<p>{Caption}</p>
+  </figcaption>
+  {/block:Caption}
+  
+    {block:PermalinkPage}
+  
+  {block:Exif}
+<ul class="exif">
+<li>{block:Camera}Camera: {Camera}{/block:Camera}</li>
+<li>{block:Aperture}Aperture: {Aperture}{/block:Aperture}</li>
+<li>{block:Exposure}Exposure: {Exposure}{/block:Exposure}</li>
+<li>{block:FocalLength}Focal Length: {FocalLength}{/block:FocalLength}</li>
+</ul>{/block:Exif}
+
+{/block:PermalinkPage}
+  
+</figure>
+{/block:Photoset}
+
+
+
+{block:Quote}
+<div class="type-quote post-content" class="quote" class="fancy">
+    <div class="fancy">
+  <blockquote>{Quote}</blockquote>
+</div>
+  {block:Source}
+  <cite class="caption">
+	{Source}
+  </cite>
+  {/block:Source}
+</div>
+{/block:Quote}
+
+
+
+{block:Link}
+<div class="type-link post-content">
+  <a {Target} href="{URL}" class="link-name">{Name}</a>
+
+  {block:Description}
+  <div class="caption">
+	{Description}
+  </div>
+  {/block:Description}
+</div>
+{/block:Link}
+
+
+
+{block:Chat}
+<div class="type-chat post-content">
+  <ul class="chat-lines">
+	{block:Lines}
+	<li>
+	  {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
+	</li>
+	{/block:Lines}
+  </ul>
+</div>
+{/block:Chat}
+
+
+
+{block:Audio}
+<div class="type-audio post-content">
+  {block:AudioEmbed}
+	  {AudioEmbed color="white"}
+  {/block:AudioEmbed}
+
+  {block:Caption}
+  <div class="caption">
+	{Caption}
+  </div>
+  {/block:Caption}
+</div>
+{/block:Audio}
+
+
+{block:Video}
+<div class="type-video post-content">
+  {Video-700}
+
+  {block:Caption}
+  <div class="caption">
+	{Caption}
+  </div>
+  {/block:Caption}
+</div>
+{/block:Video}
+
+
+{block:Answer}
+<div class="type-answer post-content" >
+  <div class="question">
+	<p class="asker">
+	  <span class="user-name">{Asker}</span>{block:English} asked{/block:English}:
+	</p>
+    <div class="fancy">
+	<h3 class="title">{Question}</h3>
+	</div>
+  </div>
+
+  {block:Answerer}
+  <div class="answer">
+	  <p class="answerer">
+		<span class="user-name">{Answerer}</span>{block:English} answered{/block:English}:
+	  </p>
+
+	  <div class="caption">
+		  {Answer}
+	  </div>
+  </div>
+  {/block:Answerer}
+
+  <div class="replies">
+	{Replies}
+  </div>
+</div>
+{/block:Answer}
+
+<hr>
+{block:Date}
+<div class="contentinfo" role="contentinfo" class="centered">
+<ul>
+    <li>
+    <a href="{ReblogURL}">reblog</a>
+    </li>
+    <li>-  
+    <a href="{permalink}">{DayOfMonth}{DayOfMonthSuffix} {Month} {year}</a> 
+    </li>
+    <li>-  
+    <a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a> {/block:NoteCount} {block:RebloggedFrom} 
+    </li>
+    <li>-  
+    <a href="{ReblogRootURL}">origin</a> 
+    </li>
+    <li>-  
+    <a href="{ReblogParentURL}">via</a> {/block:RebloggedFrom}
+    </li>
+</ul>
+
+
+  {block:PermalinkPage}
+
+  {block:HasTags}
+  <ul class="tags">
+	{block:Tags}<li><a href="{TagURL}">#{Tag}</a> </li>{/block:Tags}
+  </ul>
+  {/block:HasTags}
+ 
+ {/block:PermalinkPage}
+ </div>
+ 
+{block:PostNotes}
+<div id="notes">
+    {PostNotes}
+</div>
+{/block:PostNotes}
+
+  
+
+{/block:Date}
+ 
+
+</article>
+      {/block:Posts}
+      
+      
+
+    </main>
+    
+
+<div id="bottom" class="centered">
+{block:Pagination}
+<div class="pagination">
+<p>
+{block:NextPage}<a href="{NextPage}">Next Page</a>{/block:NextPage} {block:PreviousPage} - <a href="{PreviousPage}">Go back</a>{/block:PreviousPage}
+</p>
+</div>
+{/block:Pagination}
+    
+</div>
+
+
+    
+</div> <!-- end of content -->
+
+
+</div> <!-- end of alles -->
+
+    
+
+      
+    
+</body>
+
+
+
+
+
+
+
+
+
