@@ -33,6 +33,9 @@ SOFTWARE.
 <html>
 
 <head>
+<link rel="stylesheet" href="http://static.tumblr.com/xeccbfq/9Qenv9yn8/normalize.min.css" />
+<link href="http://static.tumblr.com/wgijwsy/k1Hm9ei8b/normalize.css" rel="stylesheet" type="text/css" />
+<link href="http://static.tumblr.com/qpcqxok/AOloyjcj9/elizabeth.css" rel="stylesheet" type="text/css"/>
 
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
@@ -48,12 +51,7 @@ SOFTWARE.
 {block:TagPage}{Tag} posts - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}
 </title>
 
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Megrim|Permanent+Marker|Seaweed+Script&amp;subset=latin-ext" rel="stylesheet"> 
-
-<link rel="stylesheet" href="http://static.tumblr.com/xeccbfq/9Qenv9yn8/normalize.min.css" />
-<link href="http://static.tumblr.com/wgijwsy/k1Hm9ei8b/normalize.css" rel="stylesheet" type="text/css" />
-<link href="http://static.tumblr.com/qpcqxok/AOloyjcj9/elizabeth.css" rel="stylesheet" type="text/css"/>
-
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Seaweed+Script&amp;subset=latin-ext" rel="stylesheet"> 
 
 <meta name="if:Show Archive" content="1"/>
 <meta name="if:Show Reading" content="0"/>
@@ -80,9 +78,6 @@ SOFTWARE.
 <style type="text/css">
 
 {CustomCSS}
-
-/* general CSS */
-
 
 body {
     background: url('{image:background}') {color:background} repeat fixed;
@@ -265,12 +260,6 @@ input:focus {
     
 </div> <!-- end of sidebar -->
 
-
-
-
-
-
-
 <div id="content">
 
     <!-- Search results -->
@@ -288,7 +277,6 @@ input:focus {
 
   <span class="divider"></span>
 </div>
-    
     
     </div>
     {/block:SearchPage}
@@ -321,7 +309,6 @@ input:focus {
 </div>
 {/block:Text}
 
-
 {block:Photo}
 <figure class="type-photo post-content">
   {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
@@ -346,7 +333,6 @@ input:focus {
   
 </figure>
 {/block:Photo}
-
 
 {block:Photoset}
 <figure class="type-photoset post-content">
@@ -373,8 +359,6 @@ input:focus {
 </figure>
 {/block:Photoset}
 
-
-
 {block:Quote}
 <div class="type-quote post-content" class="quote" class="fancy">
     <div class="fancy">
@@ -388,8 +372,6 @@ input:focus {
 </div>
 {/block:Quote}
 
-
-
 {block:Link}
 <div class="type-link post-content">
   <a {Target} href="{URL}" class="link-name">{Name}</a>
@@ -402,8 +384,6 @@ input:focus {
 </div>
 {/block:Link}
 
-
-
 {block:Chat}
 <div class="type-chat post-content">
   <ul class="chat-lines">
@@ -415,8 +395,6 @@ input:focus {
   </ul>
 </div>
 {/block:Chat}
-
-
 
 {block:Audio}
 <div class="type-audio post-content">
@@ -431,7 +409,6 @@ input:focus {
   {/block:Caption}
 </div>
 {/block:Audio}
-
 
 {block:Video}
 <div class="type-video post-content">
